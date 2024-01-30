@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text_to_Speech</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link  rel="stylesheet" href="index.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+crossorigin="anonymous">
+<style>
+    
+body {
+  background: #b3f1c3;
+}
+img 
+{
+    height:20vh
+}
+#txt{
+  height: 25vh;
+}
+h1{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    font-family: 'Honk', system-ui;
+    width: 100%;
+  text-decoration: solid;
+}
+</style>
+</head>
+<body>
+    <div class="container text-center">
+        <img id="txt" src="src/img/text.png" alt="" class="mb-5" height="50" >
+        <img src="src/img/arrow.png" alt="" class="mb-5" height="50">
+        <img src="src/img/speak.png" alt="" class="mb-5" height="50" >
+        <br>
+        <h1>TEXT TO SPEECH</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form class="mb-5">
+            <div class="form-group">
+              <textarea name="" id="text-input" class="form-control form-control-lg" placeholder="Type anything..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="rate">Rate</label>
+              <div id="rate-value" class="badge badge-primary float-right">1</div>
+              <input type="range" id="rate" class="custom-range" min="0.5" max="2" value="1" step="0.1">
+            </div>
+            <div class="form-group">
+              <label for="pitch">Pitch</label>
+              <div id="pitch-value" class="badge badge-primary float-right">1</div>
+              <input type="range" id="pitch" class="custom-range" min="0" max="2" value="1" step="0.1">
+            </div>
+            <div class="form-group">
+              <select id="voice-select" class="form-control form-control-lg"></select>
+            </div>
+            <button class="btn btn-light btn-lg btn-block">Speak It</button>
+          </form>
+           
+          <p class="text-secondary"> Note: This app uses the Web Speech API which is experimental and may not fully work in some versions of certain browsers</p>
+        </div>
+      </div>
+    </div>
+    
+<script src="index.js"></script>  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
